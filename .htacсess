@@ -1,3 +1,2 @@
-RewriteEngine On
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTPS/
-RewriteRule ^index\.html$ https://nomadcharm.github.io/sitdownpls/ [R=301,L]
+RewriteCond %{THE_REQUEST} "^\S+ /(.+)/index\.html HTTP/"
+RewriteRule ^ https://nomadcharm.github.io/sitdownpls/%1 [R=301,L]
